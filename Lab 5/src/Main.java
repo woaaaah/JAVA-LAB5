@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -7,7 +8,11 @@ import bazime.Darbininkas;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        PrintStream o = new PrintStream(new File("Darbininkai.txt"));
+        PrintStream tekstas = System.out;
+        //System.setOut(o);
 
         Darbininkas Tomas = new Darbininkas("Tomas", "Kontaktoriai", 1200, 220);
         Darbininkas Tadas = new Darbininkas("Tadas" ,"Varztai", 1100, 50.50);
@@ -65,9 +70,13 @@ public class Main {
         System.out.println(darbininkai);
 
 
-    }
+
+            }
 
         }
+
+
+
 
 
 
